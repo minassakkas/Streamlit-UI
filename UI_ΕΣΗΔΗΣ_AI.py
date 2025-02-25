@@ -24,6 +24,7 @@ def load_projects_data():
         st.error(f"Σφάλμα κατά το άνοιγμα του αρχείου: {e}")
         return None
 
+
     max_rows = 30
     df = df.head(max_rows)
     
