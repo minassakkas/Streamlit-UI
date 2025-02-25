@@ -56,6 +56,9 @@ if submit:
     if not openai_api_key.startswith("sk-"):
         st.warning("Παρακαλώ εισάγετε ένα έγκυρο OpenAI API Key!", icon="⚠")
     else:
+        openai.api_key = openai_api_key  # Set API key dynamically
+
+        
         projects_data = load_projects_data()
         if not projects_data:
             st.error("Δεν βρέθηκαν έργα ή υπήρξε πρόβλημα με το αρχείο CSV.")
